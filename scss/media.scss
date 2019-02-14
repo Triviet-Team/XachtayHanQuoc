@@ -4,6 +4,7 @@ $main_color: #F8270D;
   .container {
     max-width: 1260px;
   }
+
 }
 @media (max-width: 1270px) {
   body {
@@ -21,18 +22,27 @@ $main_color: #F8270D;
       }
     }
   }
+
+  .banner .banner-in .category ul {
+    height: 335px;
+  }
 }
 
 @media (max-width: 1200px) {
   body {
     margin-left: 15px;
   }
+  
   .menu {
     .main-menu {
       .nav li  {
         padding: 0 8px;
       }
     }
+  }
+
+  .banner .banner-in .category ul {
+    height: 245px;
   }
 }
 

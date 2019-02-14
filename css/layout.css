@@ -522,13 +522,36 @@ select:focus {
 }
 .banner .banner-in .category {
   position: relative;
-  margin-bottom: -30px;
+  margin-bottom: 30px;
+}
+.banner .banner-in .category ul {
+  height: 380px;
+  overflow: hidden;
+}
+.banner .banner-in .category ul.ul-more {
+  height: auto;
 }
 .banner .banner-in .category ul li {
   width: 100%;
   padding-bottom: 10px;
   margin-bottom: 10px;
   border-bottom: 1px solid #e1e1e1;
+}
+.banner .banner-in .category ul li a {
+  transition: 0.5s;
+}
+.banner .banner-in .category ul li a:hover {
+  color: #F8270D;
+}
+.banner .banner-in .category ul li a:hover i {
+  transform: rotate(90deg);
+  color: #F8270D;
+}
+.banner .banner-in .category ul li a i {
+  float: right;
+  transition: 0.3s;
+  font-size: 20px;
+  margin-top: -5px;
 }
 .banner .banner-in .category ul li ul {
   position: absolute;
@@ -539,15 +562,39 @@ select:focus {
   top: -30px;
   padding: 30px 20px;
   border-left: 1px solid #F8270D;
-  height: 100%;
+  height: calc(100% + 30px);
   margin-bottom: -30px;
+  transform: translateX(-50%) scaleX(0);
+  transition: 0.3s;
+}
+.banner .banner-in .category ul li ul.ul-out {
+  transform: translateX(0) scaleX(1);
 }
 .banner .banner-in .category ul li ul li {
   padding-bottom: 5px;
   border-bottom: 0;
+  padding-left: 0;
+}
+.banner .banner-in .category ul li ul li::before {
+  content: none;
 }
 .banner .banner-in .category ul li ul li i {
   margin-right: 5px;
+  float: none;
+  font-size: 14px;
+  margin-top: 0;
+}
+.banner .banner-in .category .view-more, .banner .banner-in .category .view-less {
+  color: #F8270D;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.banner .banner-in .category .view-more:hover, .banner .banner-in .category .view-less:hover {
+  letter-spacing: 2px;
+}
+.banner .banner-in .category .view-more i, .banner .banner-in .category .view-less i {
+  float: right;
 }
 .banner .service {
   margin-top: 10px;
@@ -591,6 +638,10 @@ select:focus {
   .menu .main-menu .nav li a {
     font-size: 14px;
   }
+
+  .banner .banner-in .category ul {
+    height: 335px;
+  }
 }
 @media (max-width: 1200px) {
   body {
@@ -599,6 +650,10 @@ select:focus {
 
   .menu .main-menu .nav li {
     padding: 0 8px;
+  }
+
+  .banner .banner-in .category ul {
+    height: 245px;
   }
 }
 @media (min-width: 992px) {
