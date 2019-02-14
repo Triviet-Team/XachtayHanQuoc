@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Xách Tay Việt Hàn
+    link(rel='stylesheet', href='../css/bootstrap.min.css')
+    link(rel='stylesheet', href='../css/mdb.min.css')
+    link(rel='stylesheet', href='../css/font-awesome.min.css')
+    link(rel='stylesheet', href='../css/owl.carousel.min.css')
+    link(rel='stylesheet', href='../css/owl.theme.default.min.css')
+    link(rel='stylesheet', href='../css/xzoom.css')
+    link(rel='stylesheet', href='../css/magnific-popup.css')
+    link(rel='stylesheet', href='../css/animate.min.css')
+    link(rel='stylesheet', href='../css/jquery.fancybox.min.css')
+    link(rel='stylesheet', href='../css/materialdesignicons.min.css')
+    link(rel='stylesheet', href='../css/sweetalert2.min.css')
+    link(rel='stylesheet', href='../css/layout.css')
+    link(rel='shortcut icon', href='../img/favicon.png')
+  body
+    .go-top.wow.zoomInRight(title='Lên đầu trang', data-wow-duration='2s')
+      span
+      span
+
+
+    block header
+      header
+        section.header-top
+          .container
+            .row
+              .col-md-6.text-center.text-md-left.mb-2.mb-md-0
+                ul
+                  li 
+                    a(href='tel:+84703531111')
+                      i.mdi.mdi-phone-classic
+                      | +84 70 353 1111
+                  li 
+                    a(href='mailto:xachtayviethan.com@gmail.com')
+                      i.mdi.mdi-email-variant
+                      | xachtayviethan.com@gmail.com
+
+              .col-md-6.text-center.text-md-right
+                ul
+                  li 
+                    a(href='youtube.com')
+                      i.mdi.mdi-youtube
+                      | Kênh Video Mua Sắm
+                  li 
+                    a(href='facebook.com')
+                      i.mdi.mdi-facebook-box
+                      | Xách Tay Việt Hàn
+
+        section.header-bottom
+          .container
+            .row
+              .col-md-3.d-none.d-md-block
+                .logo
+                  a(href='index.html')
+                    img(src='../img/logo.png')
+              .col-md-6
+                .search
+                  form
+                    input.form-control(type="text", placeholder='Nhập từ khóa')
+                    button(type='submit')
+                      i.mdi.mdi-magnify
+              .col-md-3.text-right.d-none.d-md-block
+                .cart-btn(title='Nhấn để xem giỏ hàng')
+                  i.mdi.mdi-chevron-down
+                  | giỏ hàng
+                  .cart-icon
+                    i.mdi.mdi-cart
+                    span 10
+
+        section.menu
+          .container
+            .row
+              .col-lg-10.col-md-11
+                .main-menu
+                  a.toggleMenu.ssm-toggle-nav
+                    i.mdi.mdi-menu
+                  a.search-btn.d-block.d-md-none
+                    i.mdi.mdi-magnify
+                  .cart-btn-mobile.d-block.d-md-none
+                    i.mdi.mdi-cart
+                    span 10
+
+                  ul.nav
+                    .nav-close
+                      i.mdi.mdi-close.d-block.d-md-none
+                    li.nav-item
+                      a(href='index.html') Trang chủ
+                    li.nav-item
+                      a(href='hang-moi-ve.html') hàng mới về
+                    li.nav-item
+                      a(href='dang-giam-gia.html') đang giảm giá
+                    li.nav-item
+                      a(href='dich-vu-mua-ho.html') dịch vụ mua hộ
+                    li.nav-item
+                      a(href='dieu-khoan.html') điều khoản
+                    li.nav-item
+                      a(href='tim-hang-va-dam-phan.html') tìm hàng và đàm phán
+
+              .col-lg-2.col-md-1
+                .currency
+                  select.form-control
+                    option(value="") Đơn vị tiền tệ
+                    option(value="") VND
+                    option(value="") WON
+          
+        .cart
+          .cart-header
+            .row
+              .col-2
+                i.mdi.mdi-close.cart-close(title='Đóng')
+              .col-8.text-center
+                h3 GIỎ HÀNG
+              .col-2.text-right
+                i.mdi.mdi-cart
+                span 10
+          .cart-body
+            .box-product-cart
+              img(src='../img/product-1.png')
+              .box-product-cart-detail
+                h5
+                  a(href="chi-tiet-san-pham.html") Mèo thần tài
+                .box-product-cart-detail-quantity
+                  button -
+                  input(type='number', value='1', min='1')
+                  button +
+                h4 500.000 đ
+            
+            .box-product-cart
+              img(src='../img/product-1.png')
+              .box-product-cart-detail
+                h5
+                  a(href="chi-tiet-san-pham.html") Mèo thần tài
+                .box-product-cart-detail-quantity
+                  button -
+                  input(type='number', value='1', min='1')
+                  button +
+                h4 500.000 đ
+            
+            .box-product-cart
+              img(src='../img/product-1.png')
+              .box-product-cart-detail
+                h5
+                  a(href="chi-tiet-san-pham.html") Mèo thần tài
+                .box-product-cart-detail-quantity
+                  button -
+                  input(type='number', value='1', min='1')
+                  button +
+                h4 500.000 đ
+            
+            .box-product-cart
+              img(src='../img/product-1.png')
+              .box-product-cart-detail
+                h5
+                  a(href="chi-tiet-san-pham.html") Mèo thần tài
+                .box-product-cart-detail-quantity
+                  button -
+                  input(type='number', value='1', min='1')
+                  button +
+                h4 500.000 đ
+            
+            .box-product-cart
+              img(src='../img/product-1.png')
+              .box-product-cart-detail
+                h5
+                  a(href="chi-tiet-san-pham.html") Mèo thần tài
+                .box-product-cart-detail-quantity
+                  button -
+                  input(type='number', value='1', min='1')
+                  button +
+                h4 500.000 đ
+            
+            .box-product-cart
+              img(src='../img/product-1.png')
+              .box-product-cart-detail
+                h5
+                  a(href="chi-tiet-san-pham.html") Mèo thần tài
+                .box-product-cart-detail-quantity
+                  button -
+                  input(type='number', value='1', min='1')
+                  button +
+                h4 500.000 đ
+            
+            .box-product-cart
+              img(src='../img/product-1.png')
+              .box-product-cart-detail
+                h5
+                  a(href="chi-tiet-san-pham.html") Mèo thần tài
+                .box-product-cart-detail-quantity
+                  button -
+                  input(type='number', value='1', min='1')
+                  button +
+                h4 500.000 đ
+            
+            .box-product-cart
+              img(src='../img/product-1.png')
+              .box-product-cart-detail
+                h5
+                  a(href="chi-tiet-san-pham.html") Mèo thần tài
+                .box-product-cart-detail-quantity
+                  button -
+                  input(type='number', value='1', min='1')
+                  button +
+                h4 500.000 đ
+            
+            .box-product-cart
+              img(src='../img/product-1.png')
+              .box-product-cart-detail
+                h5
+                  a(href="chi-tiet-san-pham.html") Mèo thần tài
+                .box-product-cart-detail-quantity
+                  button -
+                  input(type='number', value='1', min='1')
+                  button +
+                h4 500.000 đ
+            
+            
+
+          .cart-footer.text-center
+            a(href="gio-hang.html") vào giỏ hàng
+            a(href="thanh-toan.html") thanh toán
+
+
+
+        .ssm-overlay.ssm-toggle-nav
+        .overlay
+
+    block article
+
+    block footer
+      footer
+
+
+      script(src='../js/jquery-3.3.1.min.js')
+      script(src='../js/jquery.touchSwipe.min.js')
+      script(src='../js/jquery.slideandswipe.min.js')
+      script(src='../js/bootstrap.min.js')
+      script(src='../js/mdb.min.js')
+      script(src='../js/owl.carousel.min.js')
+      script(src='../js/wow.min.js')
+      script(src='../js/xzoom.min.js')
+      script(src='../js/magnific-popup.js')
+      script(src='../js/jquery.fancybox.min.js')
+      script(src='../js/sweetalert2.min.js')
+      script(src='../js/layout.js')
