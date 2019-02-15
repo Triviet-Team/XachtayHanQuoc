@@ -24,7 +24,7 @@ $main_color: #F8270D;
   }
 
   .banner .banner-in .category ul {
-    height: 335px;
+    height: 355px;
   }
 }
 
@@ -42,7 +42,11 @@ $main_color: #F8270D;
   }
 
   .banner .banner-in .category ul {
-    height: 245px;
+    height: 265px;
+  }
+
+  .box-product-detail h4 {
+    font-size: 14px;
   }
 }
 
@@ -186,7 +190,23 @@ $main_color: #F8270D;
     text-align: right;
   }
 
-  
+  .banner {
+    .banner-in {
+      grid-template-columns: 220px calc(100% - 220px);
+
+      .banner-right {
+        padding-right: 30px;
+
+        iframe {
+          height: 270px;
+        }
+      }
+
+      .category ul {
+        height: 225px;
+      }
+    }
+  }
   
 }
 
@@ -215,7 +235,7 @@ $main_color: #F8270D;
       }
 
       .nav {
-        left: -15px;
+        left: -23px;
         
       }
     }
@@ -244,6 +264,10 @@ $main_color: #F8270D;
       transform: translateY(0%);
     }
   }
+
+  .banner {
+    padding-top: 0;
+  }
 }
 
 @media (max-width: 575px) {
@@ -259,14 +283,73 @@ $main_color: #F8270D;
       font-size: 14px;
     }
   }
+
+  .banner {
+    .banner-in {
+      grid-template-columns: auto;
+      padding: 15px;
+
+      .banner-right {
+        padding-right: 0;
+        order: -1;
+
+        iframe {
+          padding-bottom: 15px;
+        }
+      }
+
+      .category {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .box-product-detail h4 span {
+    display: block;
+    margin-right: 0;
+  }
+
+  .product-5 {
+    .title-cate {
+      margin-bottom: 70px;
+
+      h2 a {
+        font-size: 20px;
+      }
+    }
+    
+    .title-right {
+      top: 45px;  
+    }
+
+    .dash-title {
+      width: 90%;
+    }
+  }
+
+  .care {
+    .title-cate {
+      margin-bottom: 70px;
+    }
+
+    .owl-theme .owl-nav {
+      top: -70px;
+    }
+  }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 354px) {
   .header-top {
     font-size: 11px;
 
     ul li a {
-      padding: 0 8px;
+      padding: 0 7px;
     }
+  }
+
+  .quickview .quantity button.custom-cart {
+    padding: 0 12px;
+    font-size: 12px;
+    margin-left: 5px;
   }
 }

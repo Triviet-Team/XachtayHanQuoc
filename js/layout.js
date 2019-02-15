@@ -1,4 +1,119 @@
+$('.product5-carousel').owlCarousel({
+  loop: false,
+  dots: false,
+  nav: true,
+  margin: 20,
+  navText: [
+    "<i class='fa fa-angle-left' aria-hidden='true'></i>",
+    "<i class='fa fa-angle-right' aria-hidden='true'></i>" 
+  ],
+  responsive: {
+    0: {
+      items:2,
+      margin: 10,
+    },
 
+    450: {
+      items:2,
+    },
+
+    768: {
+      items:3
+    },
+    1000: {
+      items:4
+    },
+    1270: {
+      items:5
+    }
+  }
+});
+
+$('.product4-carousel').owlCarousel({
+  loop: false,
+  dots: false,
+  nav: true,
+  margin: 20,
+  navText: [
+    "<i class='fa fa-angle-left' aria-hidden='true'></i>",
+    "<i class='fa fa-angle-right' aria-hidden='true'></i>" 
+  ],
+  responsive: {
+    0: {
+      items:2,
+      margin: 10,
+    },
+
+    450: {
+      items:2,
+    },
+
+    768: {
+      items:3
+    },
+    1000: {
+      items:3
+    },
+    1270: {
+      items:4
+    }
+  }
+});
+
+$('.care-carousel').owlCarousel({
+  loop: false,
+  dots: false,
+  nav: true,
+  margin: 20,
+  navText: [
+    "<i class='fa fa-angle-left' aria-hidden='true'></i>",
+    "<i class='fa fa-angle-right' aria-hidden='true'></i>" 
+  ],
+  responsive: {
+    0: {
+      items:2,
+    },
+    576: {
+      items:3,
+    },
+    768: {
+      items:4
+    },
+    1000: {
+      items:5
+    },
+    1270: {
+      items:6
+    }
+  }
+});
+
+$('.service-carousel').owlCarousel({
+  loop: true,
+  autoplay: true,
+  autoplayTimeout: 3000,
+  autoplayHoverPause: true,
+  dots: false,
+  nav: false,
+  autoplaySpeed: 1000,
+  responsive: {
+    0: {
+        items:1
+    },
+    450: {
+      items:2
+    },
+    768: {
+        items:3
+    },
+    1000: {
+        items:4
+    },
+    1270: {
+        items:4
+    }
+  }
+});
 
 // Slide modal
 $('.xzoom-carousel').owlCarousel({
@@ -15,13 +130,38 @@ $('.xzoom-carousel').owlCarousel({
 });
 
 
+let swiper = new Swiper('.swiper-cate', {
+  slidesPerView: 10,
+  slidesPerColumn: 2,
+  spaceBetween: 1,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    1270: {
+      slidesPerView: 8,
+    },
+    1200: {
+      slidesPerView: 6,
+    },
+    768: {
+      slidesPerView: 4,
+    },
+    450: {
+      slidesPerView: 3,
+    },
+  },
+});
+
+
 // XZOOM
 $(".xzoom, .xzoom-gallery").xzoom({tint: '#333', Xoffset: 15});
 $('.main-image').bind('click', function () {
-  var xzoom = $(this).data('xzoom');
+  let xzoom = $(this).data('xzoom');
   xzoom.closezoom();
-  var gallery = xzoom.gallery().cgallery;
-  var i, images = new Array();
+  let gallery = xzoom.gallery().cgallery;
+  let i, images = new Array();
   for (i in gallery) {
     images[i] = {
       src: gallery[i]
@@ -88,11 +228,17 @@ $('document').ready(function () {
     $('.view-more').removeClass('d-none');
   });
 
+  
+
   if (ww < 992) {
     $('.footer-bottom .collapse').removeClass('show');
   }
 
-  if (ww > 992) {
+  if (ww < 1200) {
+    $('.box-product-img a').removeAttr('href');
+  }
+  
+  if (ww > 767) {
     $(window).scroll(() => {
       if ($(this).scrollTop() > 170) {
         $('.menu').addClass('menu-down slideInDown');
@@ -104,16 +250,23 @@ $('document').ready(function () {
   } 
 
   // GO TOP
-  $(window).scroll( function () {
-    if ($(this).scrollTop() > 400) {
+  let iScrollPos = 0; 
+  $(window).scroll(function () {
+    let iCurScrollPos = $(this).scrollTop();
+    if (iCurScrollPos < iScrollPos) {
       $('.go-top')
         .fadeIn()
         .css('transform','translateY(0)');
+      
     } else {
       $('.go-top')
         .fadeOut()
         .css('transform','translateY(100px)');
+      $('.cart').removeClass('cart-out');
+      $('.overlay').removeClass('overlay-in');
+      $('.header-bottom').removeClass('header-bottom-out')
     }
+    iScrollPos = iCurScrollPos;
   });
 
   $('.go-top').click(() => {
@@ -136,10 +289,10 @@ $('document').ready(function () {
   });
 
   $('.main-image').bind('click', function ()  {
-    var xzoom = $(this).data('xzoom');
+    let xzoom = $(this).data('xzoom');
     xzoom.closezoom();
-    var gallery = xzoom.gallery().cgallery;
-    var i, images = new Array();
+    let gallery = xzoom.gallery().cgallery;
+    let i, images = new Array();
     for (i in gallery) {
       images[i] = {
         src: gallery[i]
@@ -191,10 +344,10 @@ $('document').ready(function () {
     $('.xzoom-preview , .xzoom-source').css('opacity', '0')
   });
 
-  $(".box-product-cart-detail-quantity button").on("click", function() {
+  $(".box-product-cart-detail-quantity button, .quantity button").on("click", function() {
 
-    var $button = $(this);
-    var oldValue = $button.parent().find("input").val();
+    let $button = $(this);
+    let oldValue = $button.parent().find("input").val();
   
     if ($button.text() == "+") {
       var newVal = parseFloat(oldValue) + 1;
@@ -208,7 +361,8 @@ $('document').ready(function () {
     }
   
     $button.parent().find("input").val(newVal);
-  
   });
   
+  
+
 });

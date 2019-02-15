@@ -212,3 +212,30 @@ select:focus {
     }
   }
 }
+
+.xzoom-source img,
+.xzoom-preview img,
+.xzoom-lens img {
+  z-index: 1051;
+}
+
+.modal {
+  cursor: url('../img/cursor.png'), auto;
+  z-index: 1050;
+}
+
+.mfp-bg {
+  z-index: 1052;
+}
+
+.mfp-wrap {
+  z-index: 1053;
+}
+
+.swal2-popup .swal2-styled.swal2-confirm {
+  background: $main_color;
+  
+  a {
+    font-weight: 500;
+  }
+}

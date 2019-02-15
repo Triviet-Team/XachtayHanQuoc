@@ -16,6 +16,7 @@ html(lang="en")
     link(rel='stylesheet', href='../css/jquery.fancybox.min.css')
     link(rel='stylesheet', href='../css/materialdesignicons.min.css')
     link(rel='stylesheet', href='../css/sweetalert2.min.css')
+    link(rel='stylesheet', href='../css/swiper.min.css')
     link(rel='stylesheet', href='../css/layout.css')
     link(rel='shortcut icon', href='../img/favicon.png')
   body
@@ -32,7 +33,7 @@ html(lang="en")
               .col-md-6.text-center.text-md-left.mb-2.mb-md-0
                 ul
                   li 
-                    a(href='tel:+84703531111')
+                    a(href='number:+84703531111')
                       i.mdi.mdi-phone-classic
                       | +84 70 353 1111
                   li 
@@ -72,7 +73,7 @@ html(lang="en")
                     i.mdi.mdi-cart
                     span 10
 
-        section.menu
+        section.menu.wow(data-wow-duration='.2s')
           .container
             .row
               .col-lg-10.col-md-11
@@ -87,7 +88,7 @@ html(lang="en")
 
                   ul.nav
                     .nav-close
-                      i.mdi.mdi-close.d-block.d-md-none
+                      i.mdi.mdi-close.d-block.d-lg-none
                     li.nav-item
                       a(href='index.html') Trang chủ
                     li.nav-item
@@ -125,9 +126,9 @@ html(lang="en")
                 h5
                   a(href="chi-tiet-san-pham.html") Mèo thần tài
                 .box-product-cart-detail-quantity
-                  button -
+                  button.waves-effect.waves-light -
                   input(type='number', value='1', min='1')
-                  button +
+                  button.waves-effect.waves-light +
                 h4 500.000 đ
             
             .box-product-cart
@@ -136,9 +137,9 @@ html(lang="en")
                 h5
                   a(href="chi-tiet-san-pham.html") Mèo thần tài
                 .box-product-cart-detail-quantity
-                  button -
+                  button.waves-effect.waves-light -
                   input(type='number', value='1', min='1')
-                  button +
+                  button.waves-effect.waves-light +
                 h4 500.000 đ
             
             .box-product-cart
@@ -147,9 +148,9 @@ html(lang="en")
                 h5
                   a(href="chi-tiet-san-pham.html") Mèo thần tài
                 .box-product-cart-detail-quantity
-                  button -
+                  button.waves-effect.waves-light -
                   input(type='number', value='1', min='1')
-                  button +
+                  button.waves-effect.waves-light +
                 h4 500.000 đ
             
             .box-product-cart
@@ -158,9 +159,9 @@ html(lang="en")
                 h5
                   a(href="chi-tiet-san-pham.html") Mèo thần tài
                 .box-product-cart-detail-quantity
-                  button -
+                  button.waves-effect.waves-light -
                   input(type='number', value='1', min='1')
-                  button +
+                  button.waves-effect.waves-light +
                 h4 500.000 đ
             
             .box-product-cart
@@ -169,9 +170,9 @@ html(lang="en")
                 h5
                   a(href="chi-tiet-san-pham.html") Mèo thần tài
                 .box-product-cart-detail-quantity
-                  button -
+                  button.waves-effect.waves-light -
                   input(type='number', value='1', min='1')
-                  button +
+                  button.waves-effect.waves-light +
                 h4 500.000 đ
             
             .box-product-cart
@@ -180,9 +181,9 @@ html(lang="en")
                 h5
                   a(href="chi-tiet-san-pham.html") Mèo thần tài
                 .box-product-cart-detail-quantity
-                  button -
+                  button.waves-effect.waves-light -
                   input(type='number', value='1', min='1')
-                  button +
+                  button.waves-effect.waves-light +
                 h4 500.000 đ
             
             .box-product-cart
@@ -191,9 +192,9 @@ html(lang="en")
                 h5
                   a(href="chi-tiet-san-pham.html") Mèo thần tài
                 .box-product-cart-detail-quantity
-                  button -
+                  button.waves-effect.waves-light -
                   input(type='number', value='1', min='1')
-                  button +
+                  button.waves-effect.waves-light +
                 h4 500.000 đ
             
             .box-product-cart
@@ -202,9 +203,9 @@ html(lang="en")
                 h5
                   a(href="chi-tiet-san-pham.html") Mèo thần tài
                 .box-product-cart-detail-quantity
-                  button -
+                  button.waves-effect.waves-light -
                   input(type='number', value='1', min='1')
-                  button +
+                  button.waves-effect.waves-light +
                 h4 500.000 đ
             
             .box-product-cart
@@ -213,9 +214,9 @@ html(lang="en")
                 h5
                   a(href="chi-tiet-san-pham.html") Mèo thần tài
                 .box-product-cart-detail-quantity
-                  button -
+                  button.waves-effect.waves-light -
                   input(type='number', value='1', min='1')
-                  button +
+                  button.waves-effect.waves-light +
                 h4 500.000 đ
             
             
@@ -229,10 +230,135 @@ html(lang="en")
         .ssm-overlay.ssm-toggle-nav
         .overlay
 
+      .modal.quickview.fade.product-modal-1.show(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle')
+        .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+          .modal-content
+            .modal-header
+              h5#exampleModalCenterTitle.modal-title Xem nhanh sản phẩm
+              button.close(type='button', data-dismiss='modal', aria-label='Close')
+                span(aria-hidden='true') ×
+            .modal-body
+              .row
+                .col-lg-6
+                  .modal-img
+                    img.main-image.xzoom(src='../img/product-1.png', xoriginal='../img/product-1.png')
+                    .xzoom-thumbs
+                      .owl-carousel.xzoom-carousel.owl-theme
+                        .item
+                          a(href='../img/product-1.png')
+                            img.xzoom-gallery(src='../img/product-1.png', xpreview='../img/product-1.png')
+                        .item
+                          a(href='../img/product-2.png')
+                            img.xzoom-gallery(src='../img/product-2.png', xpreview='../img/product-2.png')
+                        .item
+                          a(href='../img/product-1.png')
+                            img.xzoom-gallery(src='../img/product-1.png', xpreview='../img/product-1.png')
+                        .item
+                          a(href='../img/product-2.png')
+                            img.xzoom-gallery(src='../img/product-2.png', xpreview='../img/product-2.png')
+                        .item
+                          a(href='../img/product-1.png')
+                            img.xzoom-gallery(src='../img/product-1.png', xpreview='../img/product-1.png')
+                        .item
+                          a(href='../img/product-2.png')
+                            img.xzoom-gallery(src='../img/product-2.png', xpreview='../img/product-2.png')
+                .col-lg-6
+                  .quickview-detail
+                    h2 Logitech G502 Proteus Spectrum
+                    h4.price-product
+                      | 699.000 đ 
+                      span.price-default 700.000 đ
+                    h5
+                      | This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
+                    .quantity
+                      span Số lượng: 
+                      button.waves-effect.waves-light -
+                      input(type='number', value='1', min='1')
+                      button.waves-effect.waves-light +
+                      button.custom-cart thêm vào giỏ
+                  .tags
+                    | Thẻ tag: 
+                    span 
+                      a(href='#') Đặc sản Hàn quốc
+                    | ,
+                    span 
+                      a(href='#') Thời trang Hàn Quốc
+            .modal-footer
+              button.btn.btn-light(type='button', data-dismiss='modal') Đóng
+
     block article
 
     block footer
       footer
+        section.footer
+          .container
+            .row
+              .col-lg-3.col-sm-6
+                .info 
+                  h2 Xách tay Hàn Quốc
+                  
+                  p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, quidem ex. Numquam exercitationem, unde cupiditate id labore culpa dolorum rerum.
+
+              .col-lg-3.col-sm-6
+                .contact
+                  ul
+                    li
+                      h4 địa chỉ:
+                      h5 81, Bùi Tư Toàn, An Lạc, Bình Tân, TPHCM
+                    li
+                      h4 số điện thoại:
+                      h5 +84 70 353 1111
+                    li
+                      h4 email:
+                      h5 xachtayviethan.com@gmail.com
+                    
+              .col-lg-2.d-none.d-lg-block
+                .link
+                  h4 liên kết
+                  ul
+                    li
+                      a(href='hang-moi-ve.html') Hàng mới về
+                    li
+                      a(href='dang-giam-gia.html') Đang giảm giá
+                    li
+                      a(href='dich-vu-mua-ho.html') Dịch vụ mua hộ
+                    li
+                      a(href='dieu-khoan.html') Điều khoản
+                    li
+                      a(href='tim-hang-va-dam-pham.html') Tìm hàng và Đàm phán
+
+              .col-lg-4.d-none.d-lg-block
+                .category-footer
+                  h4 danh mục sản phẩm
+                  ul
+                    li
+                      a(href='san-pham.html') Mỹ phẩm Hàn Quốc
+                    li
+                      a(href='san-pham.html') Mỹ phẩm Hàn Quốc
+                    li
+                      a(href='san-pham.html') Mỹ phẩm Hàn Quốc
+                    li
+                      a(href='san-pham.html') Mỹ phẩm Hàn Quốc
+                    li
+                      a(href='san-pham.html') Mỹ phẩm Hàn Quốc
+                    li
+                      a(href='san-pham.html') Mỹ phẩm Hàn Quốc
+                    li
+                      a(href='san-pham.html') Mỹ phẩm Hàn Quốc
+                    li
+                      a(href='san-pham.html') Mỹ phẩm Hàn Quốc
+                    li
+                      a(href='san-pham.html') Mỹ phẩm Hàn Quốc
+                    
+            .footer-bot
+              .row
+                .col-sm-10.text-center.text-sm-left
+                  h5 Copyright @ 2019 Xach Tay Viet Han. All Reserved. Designed by Tri Viet
+                .col-sm-2.text-center.text-sm-right
+                  a(href='youtube.com')
+                    i.mdi.mdi-youtube
+                  a(href='youtube.com')
+                    i.mdi.mdi-facebook-box
 
 
       script(src='../js/jquery-3.3.1.min.js')
@@ -246,4 +372,5 @@ html(lang="en")
       script(src='../js/magnific-popup.js')
       script(src='../js/jquery.fancybox.min.js')
       script(src='../js/sweetalert2.min.js')
+      script(src='../js/swiper.min.js')
       script(src='../js/layout.js')
