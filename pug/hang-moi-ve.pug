@@ -1,0 +1,693 @@
+extends inc
+
+block article
+  article
+    section.bread-crumb
+      .container
+        .bc-icons
+          nav(aria-label='breadcrumb')
+            ol.breadcrumb
+              li.breadcrumb-item
+                a(href='index.html') Trang chủ
+              li.breadcrumb-item.active Sản phẩm
+
+    section.product-page
+      .container
+        .left
+          .category-left
+            h4
+              | Danh mục sản phẩm
+              i.mdi.mdi-menu-open
+
+            #productCate
+              li.list-cate-title-li
+                a.list-cate-title(data-toggle='collapse', href='#cate-left-1', role='button', aria-expanded='true', aria-controls='cate-left-1')
+                  | Chuột máy tính
+                i.mdi.mdi-chevron-down
+              #cate-left-1.collapse(data-parent='#productCate')
+                .card.card-body.list-cate
+                  ul
+                    li
+                      a(href='san-pham.html')
+                        i.mdi.mdi-minus
+                        |  Razer
+                    li
+                      a(href='san-pham.html')
+                        i.mdi.mdi-minus
+                        |  Steelseries
+                    li
+                      a(href='san-pham.html')
+                        i.mdi.mdi-minus
+                        |  Logitech
+                    li
+                      a(href='san-pham.html')
+                        i.mdi.mdi-minus
+                        |  Zowie
+                    li
+                      a(href='san-pham.html')
+                        i.mdi.mdi-minus
+                        |  Microsoft
+                    li
+                      a(href='san-pham.html')
+                        i.mdi.mdi-minus
+                        |  Alienware
+
+              li.list-cate-title-li
+                a.list-cate-title(data-toggle='collapse', href='#cate-left-2', role='button', aria-expanded='true', aria-controls='cate-left-2')
+                  | Bàn phím
+                i.mdi.mdi-chevron-down
+              #cate-left-2.collapse(data-parent='#productCate')
+                .card.card-body.list-cate
+                  ul
+                    li
+                      a(href='san-pham.html')
+                        i.mdi.mdi-minus
+                        | Fuhlen
+                    li
+                      a(href='san-pham.html')
+                        i.mdi.mdi-minus
+                        | Fuhlen
+                    
+
+              li.list-cate-title-li
+                a.list-cate-title(data-toggle='collapse', href='#cate-left-3', role='button', aria-expanded='true', aria-controls='cate-left-3')
+                  | Tai nghe
+                i.mdi.mdi-chevron-down
+              #cate-left-3.collapse(data-parent='#productCate')
+                .card.card-body.list-cate
+                  ul
+                    li
+                      a(href='san-pham.html')
+                        i.mdi.mdi-minus
+                        | Asus
+                    li
+                      a(href='san-pham.html')
+                        i.mdi.mdi-minus
+                        | Fuhlen
+                  
+
+              li.list-cate-title-li
+                a.list-cate-title(data-toggle='collapse', href='#cate-left-4', role='button', aria-expanded='true', aria-controls='cate-left-4')
+                  | Bàn di chuột
+                i.mdi.mdi-chevron-down
+              li.list-cate-title-li
+                a.list-cate-title(data-toggle='collapse', href='#cate-left-5', role='button', aria-expanded='true', aria-controls='cate-left-5')
+                  | Ghế gaming
+                i.mdi.mdi-chevron-down
+              li.list-cate-title-li
+                a.list-cate-title(data-toggle='collapse', href='#cate-left-6', role='button', aria-expanded='true', aria-controls='cate-left-6')
+                  | Tay cầm
+                i.mdi.mdi-chevron-down
+          
+          .origin
+            h3 Xuất xứ
+
+            label.check-box
+              | Hàn Quốc
+              input(type='checkbox', checked='checked')
+              span.checkmark
+            label.check-box
+              | Việt Nam
+              input(type='checkbox')
+              span.checkmark
+
+          .filter-price
+            h3 Lọc giá
+
+            label.check-box
+              | 0 đ - 1.000.000 đ
+              input(type='checkbox', checked='checked')
+              span.checkmark
+            label.check-box
+              | 1.000.000 đ - 5.000.000 đ
+              input(type='checkbox')
+              span.checkmark
+            label.check-box
+              | 5.000.000 đ - 10.000.000 đ
+              input(type='checkbox')
+              span.checkmark
+            label.check-box
+              | 10.000.000 đ - 20.000.000 đ
+              input(type='checkbox')
+              span.checkmark
+            label.check-box
+              | 20.000.000 đ - 30.000.000 đ
+              input(type='checkbox')
+              span.checkmark
+            label.check-box
+              | Hơn 30.000.000 đ
+              input(type='checkbox')
+              span.checkmark
+          
+          .filter-done 
+            | Lọc sản phẩm
+            
+          .seller-product
+            h3 sản phẩm bán chạy
+
+            .swiper-container.swiper-seller
+              .swiper-wrapper
+                .swiper-slide 
+                  .box-product-seller
+                    .box-product-seller-img
+                      a(href='chi-tiet-san-pham.html', title='Nhấn để chi xem tiết')
+                        img(src='../img/product-1.png')
+                    .box-product-seller-detail
+                      h6 Xuất xứ: Hàn Quốc
+                      h5
+                        a(href='chi-tiet-san-pham.html', title='Curabitur egestas male egesta egesta')
+                          | Curabitur egestas male egesta egesta
+                      p
+                        span 3.000.000 đ
+                        | 2.999.999 đ
+                      
+                .swiper-slide 
+                  .box-product-seller
+                    .box-product-seller-img
+                      a(href='chi-tiet-san-pham.html', title='Nhấn để chi xem tiết')
+                        img(src='../img/product-2.png')
+                    .box-product-seller-detail
+                      h6 Xuất xứ: Hàn Quốc
+                      h5
+                        a(href='chi-tiet-san-pham.html', title='Curabitur egestas male egesta egesta')
+                          | Curabitur egestas male egesta egesta
+                      p
+                        span 3.000.000 đ
+                        | 2.999.999 đ
+                      
+                .swiper-slide 
+                  .box-product-seller
+                    .box-product-seller-img
+                      a(href='chi-tiet-san-pham.html', title='Nhấn để chi xem tiết')
+                        img(src='../img/product-1.png')
+                    .box-product-seller-detail
+                      h6 Xuất xứ: Hàn Quốc
+                      h5
+                        a(href='chi-tiet-san-pham.html', title='Curabitur egestas male egesta egesta')
+                          | Curabitur egestas male egesta egesta
+                      p
+                        span 3.000.000 đ
+                        | 2.999.999 đ
+                      
+                .swiper-slide 
+                  .box-product-seller
+                    .box-product-seller-img
+                      a(href='chi-tiet-san-pham.html', title='Nhấn để chi xem tiết')
+                        img(src='../img/product-2.png')
+                    .box-product-seller-detail
+                      h6 Xuất xứ: Hàn Quốc
+                      h5
+                        a(href='chi-tiet-san-pham.html', title='Curabitur egestas male egesta egesta')
+                          | Curabitur egestas male egesta egesta
+                      p
+                        span 3.000.000 đ
+                        | 2.999.999 đ
+                      
+                .swiper-slide 
+                  .box-product-seller
+                    .box-product-seller-img
+                      a(href='chi-tiet-san-pham.html', title='Nhấn để chi xem tiết')
+                        img(src='../img/product-1.png')
+                    .box-product-seller-detail
+                      h6 Xuất xứ: Hàn Quốc
+                      h5
+                        a(href='chi-tiet-san-pham.html', title='Curabitur egestas male egesta egesta')
+                          | Curabitur egestas male egesta egesta
+                      p
+                        span 3.000.000 đ
+                        | 2.999.999 đ
+                      
+                .swiper-slide 
+                  .box-product-seller
+                    .box-product-seller-img
+                      a(href='chi-tiet-san-pham.html', title='Nhấn để chi xem tiết')
+                        img(src='../img/product-2.png')
+                    .box-product-seller-detail
+                      h6 Xuất xứ: Hàn Quốc
+                      h5
+                        a(href='chi-tiet-san-pham.html', title='Curabitur egestas male egesta egesta')
+                          | Curabitur egestas male egesta egesta
+                      p
+                        span 3.000.000 đ
+                        | 2.999.999 đ
+                      
+                .swiper-slide 
+                  .box-product-seller
+                    .box-product-seller-img
+                      a(href='chi-tiet-san-pham.html', title='Nhấn để chi xem tiết')
+                        img(src='../img/product-1.png')
+                    .box-product-seller-detail
+                      h6 Xuất xứ: Hàn Quốc
+                      h5
+                        a(href='chi-tiet-san-pham.html', title='Curabitur egestas male egesta egesta')
+                          | Curabitur egestas male egesta egesta
+                      p
+                        span 3.000.000 đ
+                        | 2.999.999 đ
+
+                .swiper-slide 
+                  .box-product-seller
+                    .box-product-seller-img
+                      a(href='chi-tiet-san-pham.html', title='Nhấn để chi xem tiết')
+                        img(src='../img/product-2.png')
+                    .box-product-seller-detail
+                      h6 Xuất xứ: Hàn Quốc
+                      h5
+                        a(href='chi-tiet-san-pham.html', title='Curabitur egestas male egesta egesta')
+                          | Curabitur egestas male egesta egesta
+                      p
+                        span 3.000.000 đ
+                        | 2.999.999 đ
+                      
+                .swiper-slide 
+                  .box-product-seller
+                    .box-product-seller-img
+                      a(href='chi-tiet-san-pham.html', title='Nhấn để chi xem tiết')
+                        img(src='../img/product-1.png')
+                    .box-product-seller-detail
+                      h6 Xuất xứ: Hàn Quốc
+                      h5
+                        a(href='chi-tiet-san-pham.html', title='Curabitur egestas male egesta egesta')
+                          | Curabitur egestas male egesta egesta
+                      p
+                        span 3.000.000 đ
+                        | 2.999.999 đ
+                
+              .swiper-button-next
+              .swiper-button-prev
+        
+        .main
+          h2 Đặc sản Hàn Quốc
+
+          .main-custom
+            .type
+              span Kiểu xem:
+              i.mdi.mdi-view-grid.type-grid.active
+              i.mdi.mdi-view-list.type-list
+
+            .sort
+              span Sắp xếp:
+              select.form-control
+                option(value="") Sản phẩm mới nhất
+                option(value="") Giá từ cao xuống thấp
+                option(value="") Giá từ thấp lên cao
+                option(value="") Tên từ A đến Z
+                option(value="") Tên từ Z đến A
+
+            .view
+              span Hiển thị:
+              select.form-control
+                option(value="") 8
+                option(value="", selected) 16 
+                option(value="") 24
+                option(value="") 32
+              | Sản phẩm
+
+          .main-product
+            .box-product
+              .box-product-status
+                span.new mới
+                span.sale 0.1%
+
+              .box-product-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                  img(src='../img/product-2.png')
+                .box-product-img-custom
+                  a.custom-quickview(title='Xem nhanh', data-toggle="modal" data-target=".product-modal-1", href='#')
+                    i.mdi.mdi-eye-plus
+                  a.custom-cart(title='Xem vào giỏ')
+                    i.mdi.mdi-cart
+
+              .box-product-detail.text-center
+                h6 Xuất xứ: Hàn Quốc
+                h5 
+                  a(href='chi-tiet-san-pham.html', title='Curabitur egestas malesuada') Curabitur egestas malesuada
+                h4
+                  span 3.000.000 đ
+                  | 2.999.999 đ
+                p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et sit delectus quam inventore magni assumenda aliquam. Facilis commodi sint nesciunt ipsa reiciendis delectus velit non a, magni eaque itaque mollitia?
+
+            .box-product
+              .box-product-status
+                span.new mới
+                span.sale 0.1%
+
+              .box-product-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                  img(src='../img/product-2.png')
+                .box-product-img-custom
+                  a.custom-quickview(title='Xem nhanh', data-toggle="modal" data-target=".product-modal-1", href='#')
+                    i.mdi.mdi-eye-plus
+                  a.custom-cart(title='Xem vào giỏ')
+                    i.mdi.mdi-cart
+
+              .box-product-detail.text-center
+                h6 Xuất xứ: Hàn Quốc
+                h5 
+                  a(href='chi-tiet-san-pham.html', title='Curabitur egestas malesuada') Curabitur egestas malesuada
+                h4
+                  span 3.000.000 đ
+                  | 2.999.999 đ
+                p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et sit delectus quam inventore magni assumenda aliquam. Facilis commodi sint nesciunt ipsa reiciendis delectus velit non a, magni eaque itaque mollitia?
+
+            .box-product
+              .box-product-status
+                span.new mới
+                span.sale 0.1%
+
+              .box-product-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                  img(src='../img/product-2.png')
+                .box-product-img-custom
+                  a.custom-quickview(title='Xem nhanh', data-toggle="modal" data-target=".product-modal-1", href='#')
+                    i.mdi.mdi-eye-plus
+                  a.custom-cart(title='Xem vào giỏ')
+                    i.mdi.mdi-cart
+
+              .box-product-detail.text-center
+                h6 Xuất xứ: Hàn Quốc
+                h5 
+                  a(href='chi-tiet-san-pham.html', title='Curabitur egestas malesuada') Curabitur egestas malesuada
+                h4
+                  span 3.000.000 đ
+                  | 2.999.999 đ
+                p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et sit delectus quam inventore magni assumenda aliquam. Facilis commodi sint nesciunt ipsa reiciendis delectus velit non a, magni eaque itaque mollitia?
+
+            .box-product
+              .box-product-status
+                span.new mới
+                span.sale 0.1%
+
+              .box-product-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                  img(src='../img/product-2.png')
+                .box-product-img-custom
+                  a.custom-quickview(title='Xem nhanh', data-toggle="modal" data-target=".product-modal-1", href='#')
+                    i.mdi.mdi-eye-plus
+                  a.custom-cart(title='Xem vào giỏ')
+                    i.mdi.mdi-cart
+
+              .box-product-detail.text-center
+                h6 Xuất xứ: Hàn Quốc
+                h5 
+                  a(href='chi-tiet-san-pham.html', title='Curabitur egestas malesuada') Curabitur egestas malesuada
+                h4
+                  span 3.000.000 đ
+                  | 2.999.999 đ
+                p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et sit delectus quam inventore magni assumenda aliquam. Facilis commodi sint nesciunt ipsa reiciendis delectus velit non a, magni eaque itaque mollitia?
+
+            .box-product
+              .box-product-status
+                span.new mới
+                span.sale 0.1%
+
+              .box-product-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                  img(src='../img/product-2.png')
+                .box-product-img-custom
+                  a.custom-quickview(title='Xem nhanh', data-toggle="modal" data-target=".product-modal-1", href='#')
+                    i.mdi.mdi-eye-plus
+                  a.custom-cart(title='Xem vào giỏ')
+                    i.mdi.mdi-cart
+
+              .box-product-detail.text-center
+                h6 Xuất xứ: Hàn Quốc
+                h5 
+                  a(href='chi-tiet-san-pham.html', title='Curabitur egestas malesuada') Curabitur egestas malesuada
+                h4
+                  span 3.000.000 đ
+                  | 2.999.999 đ
+                p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et sit delectus quam inventore magni assumenda aliquam. Facilis commodi sint nesciunt ipsa reiciendis delectus velit non a, magni eaque itaque mollitia?
+
+            .box-product
+              .box-product-status
+                span.new mới
+                span.sale 0.1%
+
+              .box-product-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                  img(src='../img/product-2.png')
+                .box-product-img-custom
+                  a.custom-quickview(title='Xem nhanh', data-toggle="modal" data-target=".product-modal-1", href='#')
+                    i.mdi.mdi-eye-plus
+                  a.custom-cart(title='Xem vào giỏ')
+                    i.mdi.mdi-cart
+
+              .box-product-detail.text-center
+                h6 Xuất xứ: Hàn Quốc
+                h5 
+                  a(href='chi-tiet-san-pham.html', title='Curabitur egestas malesuada') Curabitur egestas malesuada
+                h4
+                  span 3.000.000 đ
+                  | 2.999.999 đ
+                p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et sit delectus quam inventore magni assumenda aliquam. Facilis commodi sint nesciunt ipsa reiciendis delectus velit non a, magni eaque itaque mollitia?
+
+            .box-product
+              .box-product-status
+                span.new mới
+                span.sale 0.1%
+
+              .box-product-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                  img(src='../img/product-2.png')
+                .box-product-img-custom
+                  a.custom-quickview(title='Xem nhanh', data-toggle="modal" data-target=".product-modal-1", href='#')
+                    i.mdi.mdi-eye-plus
+                  a.custom-cart(title='Xem vào giỏ')
+                    i.mdi.mdi-cart
+
+              .box-product-detail.text-center
+                h6 Xuất xứ: Hàn Quốc
+                h5 
+                  a(href='chi-tiet-san-pham.html', title='Curabitur egestas malesuada') Curabitur egestas malesuada
+                h4
+                  span 3.000.000 đ
+                  | 2.999.999 đ
+                p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et sit delectus quam inventore magni assumenda aliquam. Facilis commodi sint nesciunt ipsa reiciendis delectus velit non a, magni eaque itaque mollitia?
+
+            .box-product
+              .box-product-status
+                span.new mới
+                span.sale 0.1%
+
+              .box-product-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                  img(src='../img/product-2.png')
+                .box-product-img-custom
+                  a.custom-quickview(title='Xem nhanh', data-toggle="modal" data-target=".product-modal-1", href='#')
+                    i.mdi.mdi-eye-plus
+                  a.custom-cart(title='Xem vào giỏ')
+                    i.mdi.mdi-cart
+
+              .box-product-detail.text-center
+                h6 Xuất xứ: Hàn Quốc
+                h5 
+                  a(href='chi-tiet-san-pham.html', title='Curabitur egestas malesuada') Curabitur egestas malesuada
+                h4
+                  span 3.000.000 đ
+                  | 2.999.999 đ
+                p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et sit delectus quam inventore magni assumenda aliquam. Facilis commodi sint nesciunt ipsa reiciendis delectus velit non a, magni eaque itaque mollitia?
+
+            .box-product
+              .box-product-status
+                span.new mới
+                span.sale 0.1%
+
+              .box-product-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                  img(src='../img/product-2.png')
+                .box-product-img-custom
+                  a.custom-quickview(title='Xem nhanh', data-toggle="modal" data-target=".product-modal-1", href='#')
+                    i.mdi.mdi-eye-plus
+                  a.custom-cart(title='Xem vào giỏ')
+                    i.mdi.mdi-cart
+
+              .box-product-detail.text-center
+                h6 Xuất xứ: Hàn Quốc
+                h5 
+                  a(href='chi-tiet-san-pham.html', title='Curabitur egestas malesuada') Curabitur egestas malesuada
+                h4
+                  span 3.000.000 đ
+                  | 2.999.999 đ
+                p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et sit delectus quam inventore magni assumenda aliquam. Facilis commodi sint nesciunt ipsa reiciendis delectus velit non a, magni eaque itaque mollitia?
+
+            .box-product
+              .box-product-status
+                span.new mới
+                span.sale 0.1%
+
+              .box-product-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                  img(src='../img/product-2.png')
+                .box-product-img-custom
+                  a.custom-quickview(title='Xem nhanh', data-toggle="modal" data-target=".product-modal-1", href='#')
+                    i.mdi.mdi-eye-plus
+                  a.custom-cart(title='Xem vào giỏ')
+                    i.mdi.mdi-cart
+
+              .box-product-detail.text-center
+                h6 Xuất xứ: Hàn Quốc
+                h5 
+                  a(href='chi-tiet-san-pham.html', title='Curabitur egestas malesuada') Curabitur egestas malesuada
+                h4
+                  span 3.000.000 đ
+                  | 2.999.999 đ
+                p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et sit delectus quam inventore magni assumenda aliquam. Facilis commodi sint nesciunt ipsa reiciendis delectus velit non a, magni eaque itaque mollitia?
+
+            .box-product
+              .box-product-status
+                span.new mới
+                span.sale 0.1%
+
+              .box-product-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                  img(src='../img/product-2.png')
+                .box-product-img-custom
+                  a.custom-quickview(title='Xem nhanh', data-toggle="modal" data-target=".product-modal-1", href='#')
+                    i.mdi.mdi-eye-plus
+                  a.custom-cart(title='Xem vào giỏ')
+                    i.mdi.mdi-cart
+
+              .box-product-detail.text-center
+                h6 Xuất xứ: Hàn Quốc
+                h5 
+                  a(href='chi-tiet-san-pham.html', title='Curabitur egestas malesuada') Curabitur egestas malesuada
+                h4
+                  span 3.000.000 đ
+                  | 2.999.999 đ
+                p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et sit delectus quam inventore magni assumenda aliquam. Facilis commodi sint nesciunt ipsa reiciendis delectus velit non a, magni eaque itaque mollitia?
+
+            .box-product
+              .box-product-status
+                span.new mới
+                span.sale 0.1%
+
+              .box-product-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                  img(src='../img/product-2.png')
+                .box-product-img-custom
+                  a.custom-quickview(title='Xem nhanh', data-toggle="modal" data-target=".product-modal-1", href='#')
+                    i.mdi.mdi-eye-plus
+                  a.custom-cart(title='Xem vào giỏ')
+                    i.mdi.mdi-cart
+
+              .box-product-detail.text-center
+                h6 Xuất xứ: Hàn Quốc
+                h5 
+                  a(href='chi-tiet-san-pham.html', title='Curabitur egestas malesuada') Curabitur egestas malesuada
+                h4
+                  span 3.000.000 đ
+                  | 2.999.999 đ
+                p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et sit delectus quam inventore magni assumenda aliquam. Facilis commodi sint nesciunt ipsa reiciendis delectus velit non a, magni eaque itaque mollitia?
+
+            .box-product
+              .box-product-status
+                span.new mới
+                span.sale 0.1%
+
+              .box-product-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                  img(src='../img/product-2.png')
+                .box-product-img-custom
+                  a.custom-quickview(title='Xem nhanh', data-toggle="modal" data-target=".product-modal-1", href='#')
+                    i.mdi.mdi-eye-plus
+                  a.custom-cart(title='Xem vào giỏ')
+                    i.mdi.mdi-cart
+
+              .box-product-detail.text-center
+                h6 Xuất xứ: Hàn Quốc
+                h5 
+                  a(href='chi-tiet-san-pham.html', title='Curabitur egestas malesuada') Curabitur egestas malesuada
+                h4
+                  span 3.000.000 đ
+                  | 2.999.999 đ
+                p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et sit delectus quam inventore magni assumenda aliquam. Facilis commodi sint nesciunt ipsa reiciendis delectus velit non a, magni eaque itaque mollitia?
+
+            .box-product
+              .box-product-status
+                span.new mới
+                span.sale 0.1%
+
+              .box-product-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                  img(src='../img/product-2.png')
+                .box-product-img-custom
+                  a.custom-quickview(title='Xem nhanh', data-toggle="modal" data-target=".product-modal-1", href='#')
+                    i.mdi.mdi-eye-plus
+                  a.custom-cart(title='Xem vào giỏ')
+                    i.mdi.mdi-cart
+
+              .box-product-detail.text-center
+                h6 Xuất xứ: Hàn Quốc
+                h5 
+                  a(href='chi-tiet-san-pham.html', title='Curabitur egestas malesuada') Curabitur egestas malesuada
+                h4
+                  span 3.000.000 đ
+                  | 2.999.999 đ
+                p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et sit delectus quam inventore magni assumenda aliquam. Facilis commodi sint nesciunt ipsa reiciendis delectus velit non a, magni eaque itaque mollitia?
+
+            .box-product
+              .box-product-status
+                span.new mới
+                span.sale 0.1%
+
+              .box-product-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                  img(src='../img/product-2.png')
+                .box-product-img-custom
+                  a.custom-quickview(title='Xem nhanh', data-toggle="modal" data-target=".product-modal-1", href='#')
+                    i.mdi.mdi-eye-plus
+                  a.custom-cart(title='Xem vào giỏ')
+                    i.mdi.mdi-cart
+
+              .box-product-detail.text-center
+                h6 Xuất xứ: Hàn Quốc
+                h5 
+                  a(href='chi-tiet-san-pham.html', title='Curabitur egestas malesuada') Curabitur egestas malesuada
+                h4
+                  span 3.000.000 đ
+                  | 2.999.999 đ
+                p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et sit delectus quam inventore magni assumenda aliquam. Facilis commodi sint nesciunt ipsa reiciendis delectus velit non a, magni eaque itaque mollitia?
+
+            .box-product
+              .box-product-status
+                span.new mới
+                span.sale 0.1%
+
+              .box-product-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để xem chi tiết')
+                  img(src='../img/product-2.png')
+                .box-product-img-custom
+                  a.custom-quickview(title='Xem nhanh', data-toggle="modal" data-target=".product-modal-1", href='#')
+                    i.mdi.mdi-eye-plus
+                  a.custom-cart(title='Xem vào giỏ')
+                    i.mdi.mdi-cart
+
+              .box-product-detail.text-center
+                h6 Xuất xứ: Hàn Quốc
+                h5 
+                  a(href='chi-tiet-san-pham.html', title='Curabitur egestas malesuada') Curabitur egestas malesuada
+                h4
+                  span 3.000.000 đ
+                  | 2.999.999 đ
+                p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et sit delectus quam inventore magni assumenda aliquam. Facilis commodi sint nesciunt ipsa reiciendis delectus velit non a, magni eaque itaque mollitia?
+
+            
+              
+          .main-paging
+            nav
+              ul.pagination.justify-content-end
+                li.page-item
+                  a.page-link(href='#', aria-label='Previous')
+                    span(aria-hidden='true') «
+                    span.sr-only Previous
+                li.page-item
+                  a.page-link.active(href='#') 1
+                li.page-item
+                  a.page-link(href='#') 2
+                li.page-item
+                  a.page-link(href='#') 3
+                li.page-item
+                  a.page-link(href='#', aria-label='Next')
+                    span(aria-hidden='true') »
+                    span.sr-only Next

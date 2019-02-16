@@ -154,6 +154,17 @@ let swiper = new Swiper('.swiper-cate', {
   },
 });
 
+let swiper2 = new Swiper('.swiper-seller', {
+  slidesPerView: 1,
+  slidesPerColumn: 5,
+  spaceBetween: 15,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+});
+
 
 // XZOOM
 $(".xzoom, .xzoom-gallery").xzoom({tint: '#333', Xoffset: 15});
@@ -363,6 +374,19 @@ $('document').ready(function () {
     $button.parent().find("input").val(newVal);
   });
   
-  
+  $('.list-cate-title').click(function() {
+    $(this).addClass('active');
+  });
 
+  $('.type-list').click(function() {
+    $('.main-product').addClass('main-product-list');
+    $(this).addClass('active');
+    $('.type-grid').removeClass('active');
+  });
+
+  $('.type-grid').click(function() {
+    $('.main-product').removeClass('main-product-list');
+    $(this).addClass('active');
+    $('.type-list').removeClass('active');
+  });
 });

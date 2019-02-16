@@ -1,12 +1,12 @@
 $main_color: #F8270D;
 
-@media (min-width: 1270px) {
+@media (min-width: 1290px) {
   .container {
     max-width: 1260px;
   }
 
 }
-@media (max-width: 1270px) {
+@media (max-width: 1290px) {
   body {
     font-size: calc(9px + 0.4vmax);
   }
@@ -25,6 +25,10 @@ $main_color: #F8270D;
 
   .banner .banner-in .category ul {
     height: 355px;
+  }
+
+  .product-page .main .main-product {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
