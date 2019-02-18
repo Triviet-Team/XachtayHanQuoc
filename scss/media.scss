@@ -30,6 +30,10 @@ $main_color: #F8270D;
   .product-page .main .main-product {
     grid-template-columns: 1fr 1fr 1fr;
   }
+
+  .similar-in {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -39,8 +43,12 @@ $main_color: #F8270D;
   
   .menu {
     .main-menu {
-      .nav li  {
-        padding: 0 8px;
+      .nav {
+        margin: 20px 0;
+
+        li  {
+          padding: 0 8px;
+        }
       }
     }
   }
@@ -212,6 +220,62 @@ $main_color: #F8270D;
     }
   }
   
+  .product-page { 
+    .container {
+      display: block;
+
+      .left {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #f4f4f4;
+        width: 270px;
+        height: 100vh;
+        z-index: 1000;
+        padding: 10px;
+        overflow: scroll;
+        border-right: 1px solid #e1e1e1;
+        transform: translateX(-300px);
+        transition: .3s;
+
+        .filter-close {
+          font-size: 24px;
+          text-align: right;
+          position: fixed;
+          right: 0px;
+          top: 0;
+          background: #252525;
+          color: white;
+          padding: 0 5px;
+        }
+
+        &.left-out {
+          transform: translateX(0);
+        }
+      }
+
+      .filter-btn {
+        font-size: 16px;
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 10px 0;
+        text-transform: uppercase;
+        font-weight: bold;
+        background: $main_color;
+        color: white;
+        text-align: center;
+        border-radius: 5px;
+
+        i {
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+
+  .similar-in {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 
@@ -271,6 +335,39 @@ $main_color: #F8270D;
 
   .banner {
     padding-top: 0;
+  }
+
+  .product-page .main {
+    .main-custom {
+      grid-template-columns: calc(100% - 190px) 170px;
+      grid-column-gap: 20px;
+
+      .sort {
+        select {
+          width: 100%;
+        }
+      }
+    }
+
+    .main-product {
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 15px;
+    }
+  }
+
+  .box-product {
+    margin-bottom: 15px;
+  }
+
+  .similar-in {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 15px;
+  }
+
+  .cart-page-product-1 img {
+    float: none;
+    margin-bottom: 5px;
+    width: 100%;
   }
 }
 
@@ -339,6 +436,10 @@ $main_color: #F8270D;
     .owl-theme .owl-nav {
       top: -70px;
     }
+  }
+
+  .bread-crumb {
+    padding: 10px 0;
   }
 }
 

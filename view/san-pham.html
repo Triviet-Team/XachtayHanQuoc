@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../css/materialdesignicons.min.css"/>
     <link rel="stylesheet" href="../css/sweetalert2.min.css"/>
     <link rel="stylesheet" href="../css/swiper.min.css"/>
+    <link rel="stylesheet" href="../css/jquery-ui.min.css"/>
     <link rel="stylesheet" href="../css/layout.css"/>
     <link rel="shortcut icon" href="../img/favicon.png"/>
   </head>
@@ -72,8 +73,8 @@
                 <ul class="nav">
                   <div class="nav-close"><i class="mdi mdi-close d-block d-lg-none"></i></div>
                   <li class="nav-item"><a href="index.html">Trang chủ</a></li>
-                  <li class="nav-item"><a href="hang-moi-ve.html">hàng mới về</a></li>
-                  <li class="nav-item"><a href="dang-giam-gia.html">đang giảm giá</a></li>
+                  <li class="nav-item"><a href="san-pham.html">hàng mới về</a></li>
+                  <li class="nav-item"><a href="san-pham.html">đang giảm giá</a></li>
                   <li class="nav-item"><a href="dich-vu-mua-ho.html">dịch vụ mua hộ</a></li>
                   <li class="nav-item"><a href="dieu-khoan.html">điều khoản</a></li>
                   <li class="nav-item"><a href="tim-hang-va-dam-phan.html">tìm hàng và đàm phán</a></li>
@@ -269,6 +270,7 @@
       <section class="product-page">
         <div class="container">
           <div class="left">
+            <div class="filter-close d-block d-lg-none"><i class="mdi mdi-close"></i></div>
             <div class="category-left">
               <h4>Danh mục sản phẩm<i class="mdi mdi-menu-open"></i></h4>
               <div id="productCate">
@@ -441,10 +443,11 @@
             </div>
           </div>
           <div class="main">
+            <div class="filter-btn d-block d-lg-none"><i class="mdi mdi-filter"></i>Lọc sản phẩm</div>
             <h2>Đặc sản Hàn Quốc</h2>
             <div class="main-custom">
-              <div class="type"><span>Kiểu xem:</span><i class="mdi mdi-view-grid type-grid active"></i><i class="mdi mdi-view-list type-list"></i></div>
-              <div class="sort"><span>Sắp xếp:</span>
+              <div class="type d-none d-md-block"><span>Kiểu xem:</span><i class="mdi mdi-view-grid type-grid active"></i><i class="mdi mdi-view-list type-list"></i></div>
+              <div class="sort"><span class="d-none d-md-inline-block">Sắp xếp:</span>
                 <select class="form-control">
                   <option value="">Sản phẩm mới nhất</option>
                   <option value="">Giá từ cao xuống thấp</option>
@@ -703,8 +706,8 @@
               <div class="link">
                 <h4>liên kết</h4>
                 <ul>
-                  <li><a href="hang-moi-ve.html">Hàng mới về</a></li>
-                  <li><a href="dang-giam-gia.html">Đang giảm giá</a></li>
+                  <li><a href="san-pham.html">Hàng mới về</a></li>
+                  <li><a href="san-pham.html">Đang giảm giá</a></li>
                   <li><a href="dich-vu-mua-ho.html">Dịch vụ mua hộ</a></li>
                   <li><a href="dieu-khoan.html">Điều khoản</a></li>
                   <li><a href="tim-hang-va-dam-pham.html">Tìm hàng và Đàm phán</a></li>
@@ -751,6 +754,7 @@
     <script src="../js/jquery.fancybox.min.js"></script>
     <script src="../js/sweetalert2.min.js"></script>
     <script src="../js/swiper.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
     <script src="../js/layout.js"></script>
   </body>
 </html>

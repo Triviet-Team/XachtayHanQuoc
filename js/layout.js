@@ -169,10 +169,10 @@ let swiper2 = new Swiper('.swiper-seller', {
 // XZOOM
 $(".xzoom, .xzoom-gallery").xzoom({tint: '#333', Xoffset: 15});
 $('.main-image').bind('click', function () {
-  let xzoom = $(this).data('xzoom');
+  var xzoom = $(this).data('xzoom');
   xzoom.closezoom();
-  let gallery = xzoom.gallery().cgallery;
-  let i, images = new Array();
+  var gallery = xzoom.gallery().cgallery;
+  var i, images = new Array();
   for (i in gallery) {
     images[i] = {
       src: gallery[i]
@@ -275,7 +275,8 @@ $('document').ready(function () {
         .css('transform','translateY(100px)');
       $('.cart').removeClass('cart-out');
       $('.overlay').removeClass('overlay-in');
-      $('.header-bottom').removeClass('header-bottom-out')
+      $('.header-bottom').removeClass('header-bottom-out');
+      $('.left').removeClass('left-out');
     }
     iScrollPos = iCurScrollPos;
   });
@@ -325,9 +326,10 @@ $('document').ready(function () {
     $('.cart').toggleClass('cart-out');
   });
   
-  $('.overlay, .cart-close').click(function () {
+  $('.overlay, .cart-close, .filter-close').click(function () {
     $('.overlay').removeClass('overlay-in');
     $('.cart').removeClass('cart-out');
+    $('.left').removeClass('left-out')
   });
 
   $('.search-btn').click(() => {
@@ -349,6 +351,37 @@ $('document').ready(function () {
         'Tiếp tục mua sắm',
     })
   });
+
+  // Autocomplete Search
+  $( function() {
+    let availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    $( ".search input" ).autocomplete({
+      source: availableTags
+    });
+  } );
 
   // SETTING MODAL OPACITY XZOOM
   $('.modal-footer button , .modal-header button , .modal').click(() => {
@@ -388,5 +421,10 @@ $('document').ready(function () {
     $('.main-product').removeClass('main-product-list');
     $(this).addClass('active');
     $('.type-list').removeClass('active');
+  });
+
+  $('.filter-btn').click(() => {
+    $('.left').addClass('left-out');
+    $('.overlay').addClass('overlay-in');
   });
 });

@@ -185,6 +185,7 @@ select:focus {
   margin-bottom: 30px;
   background: #f4f4f4;
   text-align: center;
+  border-top: 1px solid #e1e1e1;
 
   .breadcrumb {
     background: none;
@@ -267,4 +268,8 @@ select:focus {
       border-color: $main_color;
     }
   }
+}
+
+.ui-widget.ui-widget-content {
+  z-index: 1050;
 }

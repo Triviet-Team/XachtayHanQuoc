@@ -17,6 +17,7 @@ html(lang="en")
     link(rel='stylesheet', href='../css/materialdesignicons.min.css')
     link(rel='stylesheet', href='../css/sweetalert2.min.css')
     link(rel='stylesheet', href='../css/swiper.min.css')
+    link(rel="stylesheet", href="../css/jquery-ui.min.css")
     link(rel='stylesheet', href='../css/layout.css')
     link(rel='shortcut icon', href='../img/favicon.png')
   body
@@ -92,9 +93,9 @@ html(lang="en")
                     li.nav-item
                       a(href='index.html') Trang chủ
                     li.nav-item
-                      a(href='hang-moi-ve.html') hàng mới về
+                      a(href='san-pham.html') hàng mới về
                     li.nav-item
-                      a(href='dang-giam-gia.html') đang giảm giá
+                      a(href='san-pham.html') đang giảm giá
                     li.nav-item
                       a(href='dich-vu-mua-ho.html') dịch vụ mua hộ
                     li.nav-item
@@ -230,62 +231,6 @@ html(lang="en")
         .ssm-overlay.ssm-toggle-nav
         .overlay
 
-      .modal.quickview.fade.product-modal-1.show(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle')
-        .modal-dialog.modal-lg.modal-dialog-centered(role='document')
-          .modal-content
-            .modal-header
-              h5#exampleModalCenterTitle.modal-title Xem nhanh sản phẩm
-              button.close(type='button', data-dismiss='modal', aria-label='Close')
-                span(aria-hidden='true') ×
-            .modal-body
-              .row
-                .col-lg-6
-                  .modal-img
-                    img.main-image.xzoom(src='../img/product-1.png', xoriginal='../img/product-1.png')
-                    .xzoom-thumbs
-                      .owl-carousel.xzoom-carousel.owl-theme
-                        .item
-                          a(href='../img/product-1.png')
-                            img.xzoom-gallery(src='../img/product-1.png', xpreview='../img/product-1.png')
-                        .item
-                          a(href='../img/product-2.png')
-                            img.xzoom-gallery(src='../img/product-2.png', xpreview='../img/product-2.png')
-                        .item
-                          a(href='../img/product-1.png')
-                            img.xzoom-gallery(src='../img/product-1.png', xpreview='../img/product-1.png')
-                        .item
-                          a(href='../img/product-2.png')
-                            img.xzoom-gallery(src='../img/product-2.png', xpreview='../img/product-2.png')
-                        .item
-                          a(href='../img/product-1.png')
-                            img.xzoom-gallery(src='../img/product-1.png', xpreview='../img/product-1.png')
-                        .item
-                          a(href='../img/product-2.png')
-                            img.xzoom-gallery(src='../img/product-2.png', xpreview='../img/product-2.png')
-                .col-lg-6
-                  .quickview-detail
-                    h2 Logitech G502 Proteus Spectrum
-                    h4.price-product
-                      | 699.000 đ 
-                      span.price-default 700.000 đ
-                    h5
-                      | This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
-                    .quantity
-                      span Số lượng: 
-                      button.waves-effect.waves-light -
-                      input(type='number', value='1', min='1')
-                      button.waves-effect.waves-light +
-                      button.custom-cart thêm vào giỏ
-                  .tags
-                    | Thẻ tag: 
-                    span 
-                      a(href='#') Đặc sản Hàn quốc
-                    | ,
-                    span 
-                      a(href='#') Thời trang Hàn Quốc
-            .modal-footer
-              button.btn.btn-light(type='button', data-dismiss='modal') Đóng
-
     block article
 
     block footer
@@ -317,9 +262,9 @@ html(lang="en")
                   h4 liên kết
                   ul
                     li
-                      a(href='hang-moi-ve.html') Hàng mới về
+                      a(href='san-pham.html') Hàng mới về
                     li
-                      a(href='dang-giam-gia.html') Đang giảm giá
+                      a(href='san-pham.html') Đang giảm giá
                     li
                       a(href='dich-vu-mua-ho.html') Dịch vụ mua hộ
                     li
@@ -373,4 +318,5 @@ html(lang="en")
       script(src='../js/jquery.fancybox.min.js')
       script(src='../js/sweetalert2.min.js')
       script(src='../js/swiper.min.js')
+      script(src='../js/jquery-ui.min.js')
       script(src='../js/layout.js')
